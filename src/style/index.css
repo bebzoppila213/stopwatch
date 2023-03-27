@@ -1,0 +1,110 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('./fonts/GothamPro.eot');
+    src: local('Gotham Pro'), local('GothamPro'), url('./fonts/GothamPro.eot?#iefix') format('embedded-opentype'), url('./fonts/GothamPro.woff2') format('woff2'), url('./fonts/GothamPro.woff') format('woff'), url('./fonts/GothamPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #353638;
+    padding: 2%;
+}
+
+.stopwatch-inner {
+    max-width: 1010px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+}
+
+.stopwatch-line {
+    background-color: #9E9E9E;
+}
+
+.stopwatch-line--active {
+    background-color: #FFFFFF;
+}
+
+.stopwatch {
+    flex: 1 1 30%;
+    min-width: 225px;
+    height: 120px;
+    background-color: #696969;
+    display: flex;
+    flex-direction: column;
+    color: #9E9E9E;
+    font-family: 'Gotham Pro';
+}
+
+.stopwatch--active {
+    color: #FFFFFF;
+}
+
+.stopwatch-header {
+    flex: 1 1 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stopwatch-footer {
+    flex: 1 1 50%;
+}
+
+.stopwatch-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    height: 100%;
+}
+
+.stopwatch-button {
+    cursor: pointer;
+    width: 20px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stopwatch-new {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@media (max-width: 745px) {
+    .stopwatch-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .stopwatch-inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .stopwatch {
+        max-width: 270px;
+    }
+}
